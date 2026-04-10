@@ -12,5 +12,6 @@ namespace Assignment_7.Data
         object Attach(Movie movie);
         Task<Movie> GetByIdAsync(int value);
         Task SaveChangesAsync();
+
     }
 }

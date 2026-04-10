@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-namespace Assignment_5.Data
+namespace Assignment_7.Data
 {
     public class MovieRepoList
     {

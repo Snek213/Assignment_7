@@ -1,5 +1,4 @@
-﻿using Assignment_5.Data;
-using Assignment_7.Data;
+﻿using Assignment_7.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 
