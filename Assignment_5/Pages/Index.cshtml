@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!--Row one-->
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+        @foreach (var movie in Model.Movies)
+        {
+          <div class="col">
+              <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <!--Card row one-->
+                     <div class="row mb-2">
+
+                        <div class="col-auto">@movie.Id</div>
+
+                        <div class="col">@movie.Title</div>
+
+                        <div class="col-auto">$@movie.Price</div>
+                    
+                     </div>
+                        
+                           
+                          @if (!string.IsNullOrEmpty(movie.PictureUri))
+                          {
+                           <img src="@movie.PictureUri" class="card-img-top mb-2">
+                          }
+                          
+                         <div class="mt-auto">                     
+                         <p class="card-text mb-1">
+                          Release Date: @movie.ReleaseDate.ToString("MM/dd/yyyy")
+                         </p>
+                         <p class="card-text mb-3">
+                          Genre: @movie.Genre
+                         </p>
+                         <a asp-page="./Details" asp-route-id="@movie.Id" class="btn btn-primary">Details</a>
+                         </div>
+                       
+                </div>
+              </div>  
+        </div>
+        }
+    </div>
