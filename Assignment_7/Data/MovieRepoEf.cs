@@ -53,6 +53,13 @@ namespace Assignment_7.Data
             await _context.SaveChangesAsync();
 		}
 
+        public async Task Update(Assignment_7.Models.Movie movie)
+        {
 
-	}
+            _context.Movie.Update(movie);
+            await _context.SaveChangesAsync();
+
+        }
+
+    }
 }
